@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { initializeAuth, inMemoryPersistence } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDkdTjUEqX3gA6sJemzDndAM7S-VdlhgTc",
@@ -14,3 +15,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
+
+// Initialize with memory persistence to suppress the Expo warning
+// Note: To persist logins across app restarts, you need AsyncStorage and a Native Development Build.
+export const auth = initializeAuth(app, {
+  persistence: inMemoryPersistence
+});

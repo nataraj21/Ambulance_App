@@ -7,11 +7,12 @@
     "icon": "./assets/images/icon.png",
     "scheme": "ambulanceapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": false,
+    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
-    "android": {
+   "android": {
+      "newArchEnabled": true,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -20,8 +21,9 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.anonymous.ambulanceapp",
-       "googleServicesFile": "./google-services.json"
+      "package": "com.dtg.ambulance",
+      "googleServicesFile": "./google-services.json",
+      "permissions": ["INTERNET"]
     },
     "web": {
       "output": "static",
